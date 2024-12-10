@@ -128,9 +128,9 @@ L<RowFunc>, like CellFunc but for functions that accept a "row" value.
 L<Unixish>, which is a specification for function that consumes and produces
 "streams" instead of a single value.
 
-L<Data::Sah::Value>, which lets you define cell function by returning a Perl (or
-JavaScript, etc) expression to define the function. Used in code generation like
-in schema generation.
+L<Data::Sah::Filter>, which lets you define cell function by returning a Perl
+(or JavaScript, etc) expression to define the function. Used in code generation
+like in schema generation. Part of the L<Data::Sah> framework.
 
 =head2 Utility modules
 
@@ -138,10 +138,10 @@ L<App::cellfunc> lets you call specified a cell function and feed it data.
 
 L<App::dux> for Unixish.
 
-Bridges between us and C<Data::Sah::Value>: L<CellFunc::from_dsv> and
-L<Data::Sah::Value::from_cellfunc>.
+Bridges between us and C<Data::Sah::Filter>: L<CellFunc::Sah::from_sah_filter>
+and L<Data::Sah::Filter::perl::CellFunc::from_cellfunc>.
 
-Some applications let you specify cell functions or Data::Sah::Value functions
+Some applications let you specify cell functions or Data::Sah::Filter functions
 by name to transform data, e.g. L<orgadb-sel> from L<App::orgadb>.
 
 =cut
