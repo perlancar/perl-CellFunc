@@ -107,11 +107,12 @@ An example cell function:
 B<CellFunc> is the specification.
 
 Actual cell functions are put in C<CellFunc::*>, preferrably under suitable
-subnamespaces named using "CamelCase" style except the last
-element ("the name of the CellFunc") "lowercase_with_underscore" style.
+subnamespaces named using "CamelCase" style, except the last element ("the name
+of the CellFunc") which should be written using "snake_case" style.
 
-C<CellFunc::gen_row::*> is a subnamespace for cell functions that generate a
-"row" (a hashref of scalar values).
+Cell functions that generate a "row" (a hashref of scalar values) should have
+named ended with C<_row>, for example: L<CellFunc::File::stat_row>,
+L<CellFunc::File::Media::attr_row>.
 
 
 =head1 FAQ
